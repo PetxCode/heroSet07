@@ -5,14 +5,27 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider } from "react-router-dom";
 import { mainRoute } from "./router/mainRoute";
+import { ThemeProvider } from "styled-components";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
+
+const theme: any = {
+  dark: {
+    primary: "#000",
+    text: "#fff"
+  },
+  light: {
+    primary: "#fff",
+    text: "#000"
+  },
+}
+
 root.render(
   <React.StrictMode>
-    <RouterProvider router={mainRoute} />
-    {/* <App /> */}
+    <ThemeProvider theme={theme} >
+      <RouterProvider router={mainRoute} /></ThemeProvider>
   </React.StrictMode>,
 );
 

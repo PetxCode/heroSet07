@@ -43,6 +43,10 @@ const Container = styled.div<{
   font-weight: bolder;
   text-transform: uppercase;
   margin: 0 10px;
+
+
+
+  
   :hover {
     transform: scale(1.02);
   }

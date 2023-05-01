@@ -39,7 +39,11 @@ const Header = () => {
               }}
             >
               Products {hover ? <AiOutlineArrowDown /> : <AiOutlineArrowUp />}{" "}
-              {hover ? <Div>box</Div> : null}
+              {hover ?
+                // <View>
+                <Div>box</Div> :
+
+                null}
             </MyLink>
             <MyLink>Projects</MyLink>
             <MyLink>About</MyLink>
@@ -55,6 +59,13 @@ const Header = () => {
 
 export default Header;
 
+const View = styled.div`
+/* position: relative; */
+ position: absolute;
+  top: 60px;
+  right: 230px;
+`
+
 const Div = styled.div`
   width: 150px;
   min-height: 260px;
@@ -63,6 +74,7 @@ const Div = styled.div`
   position: absolute;
   top: 60px;
   right: 230px;
+  transition: all 300ms;
 `;
 
 const Icon = styled(AiOutlineMenu)`
@@ -84,6 +96,8 @@ const Image = styled.div`
 
 const MyLink = styled.div`
   margin: 0 10px;
+  cursor: pointer;
+  transition: all 300ms;
 `;
 
 const LinkData = styled.div`
